@@ -7,6 +7,6 @@ router.get('/', function(req, res, next) {
   res.send('Hello Heroku')
 });
 
-router.get('/event', controller.getEvent);
+router.post('/club', controller.googlePlaces.fetchClubsNearByGeoCode);
 
 module.exports = router;
