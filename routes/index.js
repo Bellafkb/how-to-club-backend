@@ -4,7 +4,7 @@ var controller = require('../controller/index.js')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.send('Hello Heroku')
+  res.send('How To Club')
 });
 
 router.post('/club', controller.googlePlaces.fetchClubsNearByGeoCode);
