@@ -3,11 +3,20 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+import mongoose from 'mongoose'
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+mongoose.connect('mongodb://localhost:27017/htc', {useNewUrlParser: true})
+.then(()=>{
+    console.log('database connection was successful...')
+})
+.catch((err)=>{
+  console.log({err})
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
