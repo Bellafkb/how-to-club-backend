@@ -11,7 +11,7 @@ googlePlaces.fetchClubsNearByGeoCode = async (req, res) => {
         .then(async (locationsResp) => {
             if (locationsResp.length >= 1) {
                 res.status(200).json({
-                    locationsResp
+                    clubs : locationsResp
                 })
             } else {
                 var locations;
@@ -31,7 +31,7 @@ googlePlaces.fetchClubsNearByGeoCode = async (req, res) => {
                         new db.location(newLocation).save();
                         return newLocation;
                     }))
-                    res.json(locations);
+                    res.json({clubs : locations});
                 })
                     .catch((err) => {
                         res.send(err)

@@ -1,14 +1,22 @@
 var createError = require('http-errors');
+var cors = require('cors')
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
 import mongoose from 'mongoose'
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+app.use(cors())
+
+var corsOptions = {
+  origin: 'http://localhost:4000',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 mongoose.connect('mongodb://localhost:27017/htc', {useNewUrlParser: true})
 .then(()=>{
