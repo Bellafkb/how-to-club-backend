@@ -7,8 +7,11 @@ router.get('/', function (req, res, next) {
   res.send('How To Club')
 });
 
-console.log(controller.googlePlaces.fetchClubsNearByGeoCode)
 
 router.post('/club', controller.googlePlaces.fetchClubsNearByGeoCode);
+
+router.get('/event', controller.eventBrite.myprofile);
+
+router.post('/event' , controller.eventBrite.fetchEvents)
 
 module.exports = router;

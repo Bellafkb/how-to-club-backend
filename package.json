@@ -16,6 +16,7 @@
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "dotenv": "^8.0.0",
+    "eventbrite": "^1.2.1",
     "express": "~4.16.1",
     "facebook-events-by-location-core": "^0.11.0",
     "google-places-web": "^0.3.0",
