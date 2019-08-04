@@ -14,6 +14,8 @@ router.get('/event', controller.eventBrite.myprofile);
 
 router.post('/event' , controller.eventBrite.fetchEvents)
 
+router.get('/ticketmasterevent', controller.ticketmaster.fetchEventsByLocation);
+
 
 
 module.exports = router;

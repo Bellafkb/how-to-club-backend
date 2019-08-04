@@ -5,6 +5,8 @@ config.FACEBOOK_API_KEY = "EAAMvm1GBv6MBAE18j61NZAoxZBFGKzs7fptd14q4HUkwVoNcWzL7
 config.EVENTBRITE_API_KEY = "XGMKFFQIFNFOIENQVKDQ"
 config.INSTAGRAM_CLIENT = "53b87d8129104e5c9e8cf670a5e7b3f5"
 config.INSTAGRAM_SECRET = "3ee60af0ca294f208417dc32d48850c5"
+config.TICKETMASTER_KEY = "JtwJD9iZaZNB9QzBWNPKNkVAtGhrxGWN"
+config.TICKETMASTER_SECRET = "CIY2Efv1hnv3UbVJ"
 config.redirect_uri = 'http://localhost:4000/auth'
 
 module.exports = config;
