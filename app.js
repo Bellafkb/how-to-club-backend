@@ -72,7 +72,7 @@ const InstagramStrategy = Instagram.Strategy;
 passport.use(new InstagramStrategy({
   clientID: config.INSTAGRAM_CLIENT,
   clientSecret: config.INSTAGRAM_SECRET,
-  callbackURL: "http://localhost:4000/auth"
+  callbackURL: "https://peaceful-ocean-93955.herokuapp.com/auth"
 }, (accessToken, refreshToken, profile, done) => {
   let user = {};
   user.name = profile.displayName;
