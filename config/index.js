@@ -6,5 +6,7 @@ config.EVENTBRITE_API_KEY = "XGMKFFQIFNFOIENQVKDQ"
 config.INSTAGRAM_CLIENT = "53b87d8129104e5c9e8cf670a5e7b3f5"
 config.INSTAGRAM_SECRET = "3ee60af0ca294f208417dc32d48850c5"
 config.redirect_uri = 'http://localhost:4000/auth'
+config.MLAB_DB_USERNAME = 'test123'
+config.MLAB_DB_PASSWORD = 'test123'
 
 module.exports = config;

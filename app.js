@@ -14,11 +14,12 @@ var app = express();
 app.use(cors())
 
 var corsOptions = {
-  origin: 'http://localhost:4000',
+  origin: 'http://localhost:3000',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
 
-mongoose.connect('mongodb://localhost:27017/htc', { useNewUrlParser: true })
+mongoose.connect(`mongodb://${config.MLAB_DB_USERNAME}:${config.MLAB_DB_PASSWORD}@ds149947.mlab.com:49947/klubby`,
+  { useNewUrlParser: true })
   .then(() => {
     console.log('database connection was successful...')
   })
@@ -47,7 +48,6 @@ import config from './config'
 import session from 'express-session';
 import passport from 'passport';
 import Instagram from 'passport-instagram';
-import axios from 'axios'
 
 app.use(session({
   secret: 'sytr456-65tyrd-12wrt',
@@ -78,7 +78,6 @@ passport.use(new InstagramStrategy({
   user.bio = profile._json.data.bio;
   user.media = `https://api.instagram.com/v1/users/${profile.id}/media/recent/?access_token=${accessToken}&count=8`
   user.fullname = profile._json.data.fullname;
-  console.log(profile)
   done(null, user)
 }))
 
@@ -98,6 +97,8 @@ app.get('/users', (req, res) => {
 app.use(function (req, res, next) {
   next(createError(404));
 });
+
+
 
 // error handler
 app.use(function (err, req, res, next) {

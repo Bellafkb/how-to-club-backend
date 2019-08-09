@@ -15,5 +15,4 @@ router.get('/event', controller.eventBrite.myprofile);
 router.post('/event' , controller.eventBrite.fetchEvents)
 
 
-
 module.exports = router;
