@@ -1,3 +1,18 @@
 # how-to-club-backend
 
-# run api : npm run dev
+### provided endpoints
+* List of clubs by city:
+    * POST /club
+                {
+                "city" : "berlin",
+                "radius" : "10km",
+                "category": "103"
+                }
+
+* List of clubs by city:
+    * POST /event
+                {
+                "city" : "berlin",
+                "radius" : "10km",
+                "category": "103"
+                }
