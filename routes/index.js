@@ -11,4 +11,7 @@ router.post('/club', controller.googlePlaces.fetchClubsNearByGeoCode);
 
 router.post('/event' , controller.event.getEventsByCity);
 
+router.get('/event/:id' , controller.event.getEventByID);
+
+
 module.exports = router;
