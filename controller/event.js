@@ -24,7 +24,6 @@ eventController.getEventsByCity = async (req, res) => {
 eventController.getEventByID = async (req,res) => {
     try {
         let response = await db.Event.find({id : req.params.id});
-
         res.status(200).json({
              data : response[0]
         })
