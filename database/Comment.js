@@ -7,6 +7,7 @@ var commentSchema = new Schema({
     createdAt: { type: Date, required: false, default: Date.now },
     _eventId: { type: String },
     _userId: { type: String, required: false },
+    profile_picture : {type: String, required: false}
 });
 
 export default mongoose.model('Comment', commentSchema);

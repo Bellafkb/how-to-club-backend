@@ -7,7 +7,8 @@ comment.postComment = async (req, res) => {
         let response = await Comment({
             text: reqComment.text,
             _userId: reqComment.userId,
-            _eventId: reqComment.eventId
+            _eventId: reqComment.eventId,
+            profile_picture: reqComment.profile_picture
         }).save();
         res.json({ response })
     } catch (error) {

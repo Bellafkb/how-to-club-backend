@@ -4,6 +4,8 @@ import eventBrite from './eventbrite'
 import event from './event'
 import comment from './comment';
 import authentication from "./authentication";
+import favorite from "./favorite";
+
 
 
 
@@ -13,7 +15,8 @@ module.exports = {
   eventBrite,
   event,
   comment,
-  authentication
+  authentication,
+  favorite
 };
 
 
